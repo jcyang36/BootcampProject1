@@ -4,9 +4,13 @@ import java.util.Scanner;
 
 public class daysInMonth {
 	public static void main (String[] args){
-	
 		System.out.println("Enter a number between 1 and 12: ");
 		Scanner scannerInput=new Scanner(System.in);
+		 while (!scannerInput.hasNextInt())  {
+			 System.out.println("Enter a number between 1 and 12: ");
+			 scannerInput=new Scanner(System.in);
+		 }
+
 		int randomNumber = scannerInput.nextInt();
 		if(randomNumber==1){
 			System.out.println("The number of days in month" + randomNumber+" is 31");
@@ -36,6 +40,6 @@ public class daysInMonth {
 			System.out.println("Please enter a number between 1 and 12");
 		}
 				
-				
+		 	
 	}
 }
